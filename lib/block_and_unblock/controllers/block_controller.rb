@@ -1,8 +1,12 @@
 module BlockAndUnblock
 	module Controllers
 		module BlockController
-			delegate :current_user, to: :current_controller
 			
+			include BlockAndUnblock::Errors
+
+			REQUIRED_METHODS = [ :current_user, :block_user_params, :unblock_user_params ]
+
+
 			def block_user
 				BlockAndUnblock::Interactors::BlockUser.with(
 					current_user:,
@@ -19,14 +23,11 @@ module BlockAndUnblock
 				)
 			end
 
-		private
+private
 
-			def block_user_params
-				raise 'class responsability'
-			end
-
-			def unblock_user_params
-				raise 'class responsability'
+			def method_missing(method, *args, &block)
+				raise MethodRequiredError.new(method, self.class) if REQUIRED_METHODS.include? method
+				super
 			end
 		end
 	end

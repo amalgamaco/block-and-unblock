@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 		post 'users/:blocked_user_id/unblock' => 'block#unblock'
 	end
 
+	post 'empty' => 'empty#block_user'
+	post 'empty' => 'empty#unblock_user'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
