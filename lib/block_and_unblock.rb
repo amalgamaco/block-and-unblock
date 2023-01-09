@@ -19,6 +19,7 @@ module BlockAndUnblock
 	end
 
 	module Generators
-		autoload :InitializerGenerator, 'generators/initializer_generator.rb'
+		autoload :InstallGenerator, 'generators/block_and_unblock/install_generator.rb'
 	end
+
 end
