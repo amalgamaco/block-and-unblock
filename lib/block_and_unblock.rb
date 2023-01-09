@@ -10,6 +10,7 @@ module BlockAndUnblock
 
 	module Errors
 		autoload :UnprocessableError, 'block_and_unblock/errors/unprocessable_error'
+		autoload :MethodRequiredError, 'block_and_unblock/errors/method_required_error'
 	end
 
 	module Interactors

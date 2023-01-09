@@ -90,4 +90,18 @@ RSpec.describe BlockAndUnblock::Controllers::BlockController do
 			end
 		end
 	end
+
+	describe EmptyController, type: :controller do
+		describe 'Block with empty controller' do
+			it 'responds with an error' do
+				expect { post :block_user }.to raise_error BlockAndUnblock::Errors::MethodRequiredError
+			end
+		end
+		
+		describe 'Unblock with empty controller' do
+			it 'responds with an error' do
+				expect { post :unblock_user }.to raise_error BlockAndUnblock::Errors::MethodRequiredError
+			end
+		end
+	end
 end
