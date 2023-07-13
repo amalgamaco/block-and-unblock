@@ -5,7 +5,7 @@ This gem provides a controller, two interactors and a generator for block model 
 To add this gem to your project, copy this into your gemfile:
 
 ```ruby
-	gem 'block_and_unblock', git: 'https://git.amalgama.co/amalgama/packages/gems/block.git'
+	gem 'block_and_unblock', git: 'https://github.com/amalgamaco/block-and-unblock.git'
 ```
 
 Then, execute `bundle install`.

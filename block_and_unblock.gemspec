@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
 	spec.version     = BlockAndUnblock::VERSION
 	spec.authors     = ['luca']
 	spec.email       = ['lucagiabbani@amalgama.co']
-	spec.homepage    = 'https://git.amalgama.co/'
+	spec.homepage    = 'https://github.com/amalgamaco/block-and-unblock'
 	spec.summary     = 'Summary of BlockAndUnblock.'
 	spec.description = 'Description of BlockAndUnblock.'
 
@@ -14,8 +14,8 @@ Gem::Specification.new do |spec|
 	spec.metadata['allowed_push_host'] = 'TODO: Set to http://mygemserver.com'
 
 	spec.metadata['homepage_uri'] = spec.homepage
-	spec.metadata['source_code_uri'] = 'https://git.amalgama.co/'
-	spec.metadata['changelog_uri'] = 'https://git.amalgama.co/'
+	spec.metadata['source_code_uri'] = 'https://github.com/amalgamaco/block-and-unblock'
+	spec.metadata['changelog_uri'] = 'https://github.com/amalgamaco/block-and-unblock'
 
 	spec.files = Dir.chdir(File.expand_path(__dir__)) do
 		Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.md']
