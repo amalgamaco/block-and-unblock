@@ -1,23 +1,28 @@
-##Block and Unblock
+# Block and Unblock gem
 
 This gem provides a controller, two interactors and a generator for block model and migration to implement the block and unblock functionality.
+
+## Installation
 
 To add this gem to your project, copy this into your gemfile:
 
 ```ruby
-	gem 'block_and_unblock', git: 'https://github.com/amalgamaco/block-and-unblock.git'
+gem 'block_and_unblock', github: 'amalgamaco/block-and-unblock'
 ```
 
 Then, execute `bundle install`.
 
-After that, you can generate the migration and the model with the following command:
+## Usage
+
+You can generate the migration and the model with the following command:
 
 ```shell
-	rails generate block_and_unblock:install 
+rails generate block_and_unblock:install 
 ```
 It generates a block migration in `db/migrate` and a block model in `app/models`. You can modify those files if you want to! 
 
 Then you can move foward and define a controller like this, which includes the BlockController provided by this gem:
+
 ```ruby
 class BlockController < ApplicationController
 	include BlockAndUnblock::Controllers::BlockController
@@ -59,6 +64,7 @@ private
 	end
 end
 ```
+
 The `block_relation_class_name` represents the name of your block class. If you created a block class with a different name or if you changed the one given by te install generator then you must change the `block_relation_class_name` to match your class.
 
 Also you will need to define the routes, for this example they will look like this:
